@@ -32,6 +32,7 @@
    <path d="M800 560 H1120 V780 H800Z" class="f-ochre"/>
    <path d="M850 300 H1070 V560 H850Z" class="f-ochre"/>
    <path d="M850 300 H1070 V560 H850Z" class="f-sienna" opacity=".3"/>
+   <path d="M850 300 H1070 V560 H850ZM800 560 H1120 V780 H800ZM840 215 H1080 V300 H840Z M1080 520 H1420 V780 H1080Z M560 560 H830 V780 H560Z" fill="url(#wc-brick)" opacity=".8"/>
    <path d="M840 215 H1080 V300 H840Z" class="f-ochre"/>
    <path d="M900 150 H1020 V215 H900Z" class="f-gold"/>
    <path d="M890 150 C890 120 925 100 960 98 C995 100 1030 120 1030 150Z" class="f-burnt" opacity=".85"/>
