@@ -1,0 +1,196 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+<defs>
+<style>:root{--paper:#F5F0E6;--paper_deep:#E9DCC2;--paper_warm:#F2E3C6;--sand:#E6CC98;--ochre:#D4A058;--gold:#EDBE6C;--sienna:#B2683A;--burnt:#8A4A2A;--brick:#A9552F;--shade_warm:#8E6B57;--shade_cool:#6D7B95;--shade_deep:#4B5670;--sky_pale:#DDE4EB;--sky_mid:#A8B7CB;--sky_slate:#7E8EA8;--sky_deep:#5A6886;--cloud_warm:#F0E2CB;--turquoise:#3FA6A0;--turquoise_deep:#2B7F86;--lapis:#3C5F9C;--gold_dome:#E0A838;--olive:#7F8B4E;--foliage:#5F7440;--foliage_deep:#40552F;--autumn:#C98A3C;--water:#8FA6BA;--water_deep:#60778F;--rock:#9C8771;--rock_shade:#6E5F55;--snow:#F1EEE8;--ink:#6B4A2F;--splat_warm:#C98B4A;--splat_cool:#6F86A8}.f-paper{fill:var(--paper)}.s-paper{stroke:var(--paper)}.f-paper_deep{fill:var(--paper_deep)}.s-paper_deep{stroke:var(--paper_deep)}.f-paper_warm{fill:var(--paper_warm)}.s-paper_warm{stroke:var(--paper_warm)}.f-sand{fill:var(--sand)}.s-sand{stroke:var(--sand)}.f-ochre{fill:var(--ochre)}.s-ochre{stroke:var(--ochre)}.f-gold{fill:var(--gold)}.s-gold{stroke:var(--gold)}.f-sienna{fill:var(--sienna)}.s-sienna{stroke:var(--sienna)}.f-burnt{fill:var(--burnt)}.s-burnt{stroke:var(--burnt)}.f-brick{fill:var(--brick)}.s-brick{stroke:var(--brick)}.f-shade_warm{fill:var(--shade_warm)}.s-shade_warm{stroke:var(--shade_warm)}.f-shade_cool{fill:var(--shade_cool)}.s-shade_cool{stroke:var(--shade_cool)}.f-shade_deep{fill:var(--shade_deep)}.s-shade_deep{stroke:var(--shade_deep)}.f-sky_pale{fill:var(--sky_pale)}.s-sky_pale{stroke:var(--sky_pale)}.f-sky_mid{fill:var(--sky_mid)}.s-sky_mid{stroke:var(--sky_mid)}.f-sky_slate{fill:var(--sky_slate)}.s-sky_slate{stroke:var(--sky_slate)}.f-sky_deep{fill:var(--sky_deep)}.s-sky_deep{stroke:var(--sky_deep)}.f-cloud_warm{fill:var(--cloud_warm)}.s-cloud_warm{stroke:var(--cloud_warm)}.f-turquoise{fill:var(--turquoise)}.s-turquoise{stroke:var(--turquoise)}.f-turquoise_deep{fill:var(--turquoise_deep)}.s-turquoise_deep{stroke:var(--turquoise_deep)}.f-lapis{fill:var(--lapis)}.s-lapis{stroke:var(--lapis)}.f-gold_dome{fill:var(--gold_dome)}.s-gold_dome{stroke:var(--gold_dome)}.f-olive{fill:var(--olive)}.s-olive{stroke:var(--olive)}.f-foliage{fill:var(--foliage)}.s-foliage{stroke:var(--foliage)}.f-foliage_deep{fill:var(--foliage_deep)}.s-foliage_deep{stroke:var(--foliage_deep)}.f-autumn{fill:var(--autumn)}.s-autumn{stroke:var(--autumn)}.f-water{fill:var(--water)}.s-water{stroke:var(--water)}.f-water_deep{fill:var(--water_deep)}.s-water_deep{stroke:var(--water_deep)}.f-rock{fill:var(--rock)}.s-rock{stroke:var(--rock)}.f-rock_shade{fill:var(--rock_shade)}.s-rock_shade{stroke:var(--rock_shade)}.f-snow{fill:var(--snow)}.s-snow{stroke:var(--snow)}.f-ink{fill:var(--ink)}.s-ink{stroke:var(--ink)}.f-splat_warm{fill:var(--splat_warm)}.s-splat_warm{stroke:var(--splat_warm)}.f-splat_cool{fill:var(--splat_cool)}.s-splat_cool{stroke:var(--splat_cool)}</style>
+
+<!-- wc-bleed: fills. edge bleed (displacement) + darker pooled rim + pigment granulation -->
+<filter id="wc-bleed" filterUnits="userSpaceOnUse" x="0" y="0" width="1920" height="1080" color-interpolation-filters="sRGB">
+ <feTurbulence type="fractalNoise" baseFrequency="0.014" numOctaves="3" seed="3" result="n1"/>
+ <feDisplacementMap in="SourceGraphic" in2="n1" scale="16" xChannelSelector="R" yChannelSelector="G" result="d"/>
+ <feMorphology in="d" operator="erode" radius="3" result="er"/>
+ <feGaussianBlur in="er" stdDeviation="2.5" result="erb"/>
+ <feComposite in="d" in2="erb" operator="out" result="rim"/>
+ <feColorMatrix in="rim" type="matrix" values="0.74 0 0 0 0  0 0.7 0 0 0  0 0 0.76 0 0  0 0 0 0.6 0" result="rimdark"/>
+ <feColorMatrix in="n1" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0.55 0 0.68" result="blot"/>
+ <feTurbulence type="fractalNoise" baseFrequency="0.6" numOctaves="2" seed="8" result="n2"/>
+ <feColorMatrix in="n2" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0.5 0 0 0 0.68" result="gran"/>
+ <feComposite in="d" in2="blot" operator="in" result="d2"/>
+ <feComposite in="d2" in2="gran" operator="in" result="d3"/>
+ <feMerge result="m"><feMergeNode in="d3"/><feMergeNode in="rimdark"/></feMerge>
+ <feGaussianBlur in="m" stdDeviation="0.7"/>
+</filter>
+
+<!-- wc-soft: skies, mountains, haze. big wobble, heavy blur, no rim -->
+<filter id="wc-soft" filterUnits="userSpaceOnUse" x="0" y="0" width="1920" height="1080" color-interpolation-filters="sRGB">
+ <feTurbulence type="fractalNoise" baseFrequency="0.008" numOctaves="3" seed="12" result="n1"/>
+ <feDisplacementMap in="SourceGraphic" in2="n1" scale="34" xChannelSelector="R" yChannelSelector="G" result="d"/>
+ <feGaussianBlur in="d" stdDeviation="9" result="b"/>
+ <feTurbulence type="fractalNoise" baseFrequency="0.5" numOctaves="2" seed="9" result="n2"/>
+ <feColorMatrix in="n2" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0.4 0 0 0 0.75" result="gran"/>
+ <feComposite in="b" in2="gran" operator="in"/>
+</filter>
+
+<!-- wc-ink: thin irregular sepia linework -->
+<filter id="wc-ink" filterUnits="userSpaceOnUse" x="0" y="0" width="1920" height="1080" color-interpolation-filters="sRGB">
+ <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="5" result="n"/>
+ <feDisplacementMap in="SourceGraphic" in2="n" scale="3.4" xChannelSelector="R" yChannelSelector="G" result="d"/>
+ <feGaussianBlur in="d" stdDeviation="0.45" result="b"/>
+ <feTurbulence type="fractalNoise" baseFrequency="0.09" numOctaves="2" seed="6" result="n2"/>
+ <feColorMatrix in="n2" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  1.1 0 0 0 0.25" result="var"/>
+ <feComposite in="b" in2="var" operator="in"/>
+</filter>
+
+<!-- wc-reflection: horizontal ripple distortion + soft blur (use with mask wc-reflect-fade) -->
+<filter id="wc-reflection" filterUnits="userSpaceOnUse" x="0" y="0" width="1920" height="1080" color-interpolation-filters="sRGB">
+ <feTurbulence type="fractalNoise" baseFrequency="0.0015 0.04" numOctaves="2" seed="11" result="n"/>
+ <feDisplacementMap in="SourceGraphic" in2="n" scale="26" xChannelSelector="R" yChannelSelector="B" result="d"/>
+ <feGaussianBlur in="d" stdDeviation="4 1.4"/>
+</filter>
+
+<!-- wc-grain: paper grain, drawn over everything -->
+<filter id="wc-grain" filterUnits="userSpaceOnUse" x="0" y="0" width="1920" height="1080" color-interpolation-filters="sRGB">
+ <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" seed="2" result="g"/>
+ <feColorMatrix in="g" type="matrix" values="0 0 0 0 0.45  0 0 0 0 0.37  0 0 0 0 0.27  1 0 0 0 -0.36"/>
+</filter>
+<filter id="wc-paper-tone" filterUnits="userSpaceOnUse" x="0" y="0" width="1920" height="1080" color-interpolation-filters="sRGB">
+ <feTurbulence type="fractalNoise" baseFrequency="0.0035 0.005" numOctaves="4" seed="17" result="g"/>
+ <feColorMatrix in="g" type="matrix" values="0 0 0 0 0.86  0 0 0 0 0.76  0 0 0 0 0.58  0 0 0 0.9 -0.22"/>
+</filter>
+
+<!-- wc-torn: irregular torn-watercolor edge for the vignette mask / halo -->
+<filter id="wc-torn" filterUnits="userSpaceOnUse" x="0" y="0" width="1920" height="1080" color-interpolation-filters="sRGB">
+ <feTurbulence type="fractalNoise" baseFrequency="0.0045 0.0065" numOctaves="4" seed="21" result="big"/>
+ <feDisplacementMap in="SourceGraphic" in2="big" scale="170" xChannelSelector="R" yChannelSelector="G" result="r1"/>
+ <feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="3" seed="4" result="fine"/>
+ <feDisplacementMap in="r1" in2="fine" scale="30" xChannelSelector="G" yChannelSelector="R" result="r2"/>
+ <feGaussianBlur in="r2" stdDeviation="14" result="b1"/>
+ <feComponentTransfer in="b1" result="sharp"><feFuncA type="linear" slope="3.4" intercept="-1.2"/></feComponentTransfer>
+ <feGaussianBlur in="r2" stdDeviation="42" result="b2"/>
+ <feComponentTransfer in="b2" result="faint"><feFuncA type="linear" slope="0.5"/></feComponentTransfer>
+ <feMerge><feMergeNode in="faint"/><feMergeNode in="sharp"/></feMerge>
+</filter>
+
+<mask id="wc-vignette" maskUnits="userSpaceOnUse" x="0" y="0" width="1920" height="1080">
+ <ellipse cx="960" cy="540" rx="820" ry="430" fill="#fff" filter="url(#wc-torn)"/>
+</mask>
+
+<linearGradient id="wc-reflect-grad" gradientUnits="userSpaceOnUse" x1="0" y1="780" x2="0" y2="1010">
+ <stop offset="0" stop-color="#fff" stop-opacity=".62"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
+</linearGradient>
+<mask id="wc-reflect-fade" maskUnits="userSpaceOnUse" x="0" y="0" width="1920" height="1080">
+ <rect x="0" y="780" width="1920" height="300" fill="url(#wc-reflect-grad)"/>
+</mask>
+
+<linearGradient id="wc-sky-grad" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="800">
+ <stop offset="0" style="stop-color:var(--sky_slate)" stop-opacity=".85"/>
+ <stop offset=".45" style="stop-color:var(--sky_mid)" stop-opacity=".6"/>
+ <stop offset="1" style="stop-color:var(--paper_warm)" stop-opacity=".85"/>
+</linearGradient>
+<linearGradient id="wc-light-grad" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1920" y2="0">
+ <stop offset="0" stop-color="#FFD9A0" stop-opacity=".7"/><stop offset=".5" stop-color="#FFE9C4" stop-opacity="0"/><stop offset="1" stop-color="#5E6E92" stop-opacity=".42"/>
+</linearGradient>
+<linearGradient id="wc-shade-lr" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1920" y2="0">
+ <stop offset=".2" style="stop-color:var(--shade_cool)" stop-opacity="0"/><stop offset=".85" style="stop-color:var(--shade_cool)" stop-opacity=".5"/>
+</linearGradient>
+<radialGradient id="wc-glow-grad" gradientUnits="userSpaceOnUse" cx="260" cy="260" r="900">
+ <stop offset="0" stop-color="#FFD58A" stop-opacity=".5"/><stop offset="1" stop-color="#FFD58A" stop-opacity="0"/>
+</radialGradient>
+
+<!-- wc-paper: off-white paper + faint blotchy tone. Put first. -->
+<g id="wc-paper"><rect width="1920" height="1080" class="f-paper"/><rect width="1920" height="1080" filter="url(#wc-paper-tone)"/></g>
+<!-- wc-halo: warm tan fringe just outside the painting (put before the masked painting group) -->
+<g id="wc-halo"><ellipse cx="960" cy="540" rx="850" ry="455" class="f-sand" opacity=".34" filter="url(#wc-torn)"/></g>
+<!-- wc-sky: loose slate washes + soft clouds. Mirror with matrix(-1 0 0 1 1920 0) for variety. -->
+<g id="wc-sky"><g filter="url(#wc-soft)"><rect x="-60" y="-60" width="2040" height="900" fill="url(#wc-sky-grad)"/><g class="f-sky_deep" opacity="0.27"><ellipse cx="601" cy="141" rx="143" ry="46"/><ellipse cx="638" cy="142" rx="107" ry="58"/><ellipse cx="854" cy="146" rx="118" ry="65"/><ellipse cx="921" cy="181" rx="134" ry="76"/><ellipse cx="426" cy="203" rx="124" ry="49"/><ellipse cx="465" cy="161" rx="171" ry="51"/></g><g class="f-sky_deep" opacity="0.19"><ellipse cx="882" cy="290" rx="138" ry="82"/><ellipse cx="1004" cy="331" rx="120" ry="77"/><ellipse cx="1233" cy="343" rx="104" ry="89"/><ellipse cx="1104" cy="362" rx="141" ry="76"/><ellipse cx="1321" cy="280" rx="118" ry="97"/><ellipse cx="926" cy="320" rx="89" ry="93"/></g><g class="f-sky_deep" opacity="0.29"><ellipse cx="1446" cy="309" rx="154" ry="87"/><ellipse cx="1659" cy="300" rx="174" ry="56"/><ellipse cx="1511" cy="316" rx="206" ry="86"/><ellipse cx="1258" cy="291" rx="174" ry="55"/><ellipse cx="1365" cy="271" rx="121" ry="56"/><ellipse cx="1552" cy="268" rx="133" ry="69"/></g><g class="f-sky_deep" opacity="0.32"><ellipse cx="1720" cy="194" rx="112" ry="82"/><ellipse cx="1492" cy="196" rx="166" ry="70"/><ellipse cx="1401" cy="125" rx="108" ry="85"/><ellipse cx="1606" cy="128" rx="90" ry="82"/><ellipse cx="1497" cy="161" rx="165" ry="94"/><ellipse cx="1569" cy="167" rx="143" ry="66"/></g><g class="f-sky_deep" opacity="0.24"><ellipse cx="1546" cy="315" rx="171" ry="76"/><ellipse cx="1344" cy="328" rx="125" ry="90"/><ellipse cx="1335" cy="302" rx="124" ry="78"/><ellipse cx="1524" cy="305" rx="194" ry="105"/><ellipse cx="1394" cy="333" rx="143" ry="92"/><ellipse cx="1378" cy="407" rx="206" ry="97"/></g><g class="f-sky_deep" opacity="0.22"><ellipse cx="1068" cy="124" rx="75" ry="93"/><ellipse cx="945" cy="122" rx="109" ry="56"/><ellipse cx="945" cy="201" rx="129" ry="83"/><ellipse cx="837" cy="143" rx="84" ry="86"/><ellipse cx="947" cy="182" rx="95" ry="64"/><ellipse cx="1060" cy="202" rx="129" ry="87"/></g><g class="f-sky_deep" opacity="0.24"><ellipse cx="1269" cy="302" rx="99" ry="73"/><ellipse cx="1560" cy="400" rx="110" ry="103"/><ellipse cx="1690" cy="400" rx="105" ry="72"/><ellipse cx="1356" cy="320" rx="93" ry="90"/><ellipse cx="1651" cy="388" rx="113" ry="91"/><ellipse cx="1607" cy="308" rx="125" ry="102"/></g><g class="f-sky_deep" opacity="0.31"><ellipse cx="1333" cy="380" rx="169" ry="63"/><ellipse cx="1368" cy="392" rx="149" ry="55"/><ellipse cx="1229" cy="326" rx="164" ry="77"/><ellipse cx="1239" cy="382" rx="170" ry="72"/><ellipse cx="1342" cy="359" rx="101" ry="49"/><ellipse cx="1655" cy="368" rx="133" ry="81"/></g><g class="f-sky_deep" opacity="0.22"><ellipse cx="730" cy="369" rx="163" ry="59"/><ellipse cx="805" cy="360" rx="194" ry="63"/><ellipse cx="828" cy="399" rx="193" ry="65"/><ellipse cx="1101" cy="392" rx="158" ry="69"/><ellipse cx="566" cy="386" rx="124" ry="50"/><ellipse cx="1031" cy="363" rx="152" ry="76"/></g><g class="f-sky_slate" opacity="0.32"><ellipse cx="875" cy="336" rx="96" ry="56"/><ellipse cx="1164" cy="331" rx="117" ry="73"/><ellipse cx="1225" cy="326" rx="121" ry="64"/><ellipse cx="1051" cy="346" rx="110" ry="65"/><ellipse cx="1036" cy="366" rx="127" ry="77"/><ellipse cx="1238" cy="311" rx="117" ry="79"/></g><g class="f-sky_slate" opacity="0.21"><ellipse cx="1442" cy="235" rx="95" ry="68"/><ellipse cx="1660" cy="241" rx="98" ry="65"/><ellipse cx="1410" cy="295" rx="111" ry="51"/><ellipse cx="1678" cy="259" rx="86" ry="75"/><ellipse cx="1638" cy="241" rx="83" ry="60"/><ellipse cx="1475" cy="244" rx="77" ry="67"/></g><g class="f-sky_slate" opacity="0.25"><ellipse cx="184" cy="409" rx="79" ry="55"/><ellipse cx="253" cy="434" rx="82" ry="38"/><ellipse cx="-58" cy="424" rx="93" ry="35"/><ellipse cx="101" cy="431" rx="129" ry="38"/><ellipse cx="-12" cy="431" rx="112" ry="48"/><ellipse cx="-37" cy="384" rx="120" ry="42"/></g><g class="f-sky_slate" opacity="0.21"><ellipse cx="389" cy="499" rx="148" ry="71"/><ellipse cx="148" cy="544" rx="153" ry="64"/><ellipse cx="51" cy="542" rx="101" ry="58"/><ellipse cx="66" cy="497" rx="99" ry="66"/><ellipse cx="132" cy="563" rx="105" ry="73"/><ellipse cx="73" cy="525" rx="85" ry="64"/></g><g class="f-sky_slate" opacity="0.27"><ellipse cx="319" cy="444" rx="138" ry="48"/><ellipse cx="124" cy="490" rx="108" ry="50"/><ellipse cx="209" cy="500" rx="104" ry="59"/><ellipse cx="218" cy="478" rx="108" ry="46"/><ellipse cx="-71" cy="446" rx="85" ry="56"/><ellipse cx="18" cy="448" rx="86" ry="59"/></g><g class="f-sky_slate" opacity="0.24"><ellipse cx="1565" cy="426" rx="94" ry="45"/><ellipse cx="1752" cy="479" rx="100" ry="45"/><ellipse cx="1754" cy="435" rx="88" ry="38"/><ellipse cx="1536" cy="446" rx="97" ry="44"/><ellipse cx="1582" cy="415" rx="83" ry="41"/><ellipse cx="1542" cy="418" rx="69" ry="47"/></g><g class="f-sky_slate" opacity="0.3"><ellipse cx="590" cy="453" rx="106" ry="65"/><ellipse cx="708" cy="388" rx="129" ry="77"/><ellipse cx="296" cy="449" rx="141" ry="76"/><ellipse cx="598" cy="447" rx="89" ry="72"/><ellipse cx="498" cy="449" rx="135" ry="84"/><ellipse cx="533" cy="454" rx="127" ry="79"/></g><g class="f-sky_slate" opacity="0.22"><ellipse cx="603" cy="235" rx="94" ry="60"/><ellipse cx="551" cy="230" rx="60" ry="65"/><ellipse cx="574" cy="231" rx="89" ry="61"/><ellipse cx="346" cy="247" rx="74" ry="44"/><ellipse cx="412" cy="247" rx="71" ry="64"/><ellipse cx="650" cy="230" rx="81" ry="56"/></g><g class="f-cloud_warm" opacity="0.47"><ellipse cx="1091" cy="551" rx="145" ry="49"/><ellipse cx="1295" cy="534" rx="92" ry="48"/><ellipse cx="1346" cy="581" rx="140" ry="49"/><ellipse cx="1270" cy="565" rx="124" ry="44"/><ellipse cx="1453" cy="547" rx="163" ry="67"/><ellipse cx="1028" cy="565" rx="151" ry="68"/></g><g class="f-cloud_warm" opacity="0.51"><ellipse cx="894" cy="384" rx="96" ry="80"/><ellipse cx="731" cy="439" rx="95" ry="78"/><ellipse cx="938" cy="391" rx="117" ry="64"/><ellipse cx="692" cy="373" rx="94" ry="63"/><ellipse cx="792" cy="384" rx="85" ry="58"/><ellipse cx="988" cy="373" rx="109" ry="76"/></g><g class="f-cloud_warm" opacity="0.54"><ellipse cx="238" cy="609" rx="175" ry="66"/><ellipse cx="232" cy="611" rx="115" ry="48"/><ellipse cx="99" cy="644" rx="116" ry="78"/><ellipse cx="175" cy="598" rx="135" ry="53"/><ellipse cx="239" cy="654" rx="165" ry="74"/><ellipse cx="371" cy="650" rx="170" ry="65"/></g><g class="f-cloud_warm" opacity="0.68"><ellipse cx="1398" cy="332" rx="98" ry="59"/><ellipse cx="1130" cy="344" rx="122" ry="43"/><ellipse cx="1447" cy="374" rx="115" ry="52"/><ellipse cx="1220" cy="349" rx="126" ry="40"/><ellipse cx="1147" cy="328" rx="169" ry="48"/><ellipse cx="1178" cy="370" rx="176" ry="47"/></g><g class="f-cloud_warm" opacity="0.48"><ellipse cx="252" cy="376" rx="89" ry="54"/><ellipse cx="419" cy="385" rx="81" ry="45"/><ellipse cx="297" cy="381" rx="62" ry="39"/><ellipse cx="490" cy="369" rx="85" ry="48"/><ellipse cx="456" cy="374" rx="73" ry="39"/><ellipse cx="305" cy="387" rx="109" ry="53"/></g><g class="f-cloud_warm" opacity="0.72"><ellipse cx="1576" cy="343" rx="56" ry="54"/><ellipse cx="1716" cy="360" rx="98" ry="71"/><ellipse cx="1506" cy="309" rx="63" ry="58"/><ellipse cx="1640" cy="368" rx="92" ry="61"/><ellipse cx="1666" cy="334" rx="83" ry="43"/><ellipse cx="1671" cy="318" rx="101" ry="61"/></g><g class="f-cloud_warm" opacity="0.66"><ellipse cx="471" cy="340" rx="99" ry="57"/><ellipse cx="574" cy="351" rx="104" ry="40"/><ellipse cx="542" cy="367" rx="125" ry="59"/><ellipse cx="761" cy="368" rx="82" ry="47"/><ellipse cx="789" cy="384" rx="86" ry="41"/><ellipse cx="616" cy="382" rx="93" ry="47"/></g><g class="f-cloud_warm" opacity="0.55"><ellipse cx="1205" cy="625" rx="78" ry="40"/><ellipse cx="1323" cy="617" rx="78" ry="43"/><ellipse cx="1165" cy="631" rx="80" ry="29"/><ellipse cx="1330" cy="608" rx="122" ry="34"/><ellipse cx="1119" cy="605" rx="91" ry="37"/><ellipse cx="1400" cy="601" rx="89" ry="29"/></g><g class="f-paper" opacity="0.52"><ellipse cx="1848" cy="240" rx="68" ry="32"/><ellipse cx="1855" cy="223" rx="48" ry="31"/><ellipse cx="1813" cy="213" rx="66" ry="24"/><ellipse cx="1727" cy="223" rx="48" ry="19"/><ellipse cx="1705" cy="224" rx="77" ry="20"/><ellipse cx="1863" cy="219" rx="55" ry="29"/></g><g class="f-paper" opacity="0.51"><ellipse cx="1594" cy="313" rx="55" ry="42"/><ellipse cx="1389" cy="323" rx="71" ry="40"/><ellipse cx="1392" cy="306" rx="44" ry="43"/><ellipse cx="1442" cy="338" rx="74" ry="32"/><ellipse cx="1445" cy="347" rx="64" ry="31"/><ellipse cx="1547" cy="319" rx="52" ry="26"/></g><g class="f-paper" opacity="0.41"><ellipse cx="1292" cy="490" rx="116" ry="57"/><ellipse cx="1345" cy="477" rx="86" ry="46"/><ellipse cx="1533" cy="473" rx="107" ry="52"/><ellipse cx="1497" cy="508" rx="96" ry="42"/><ellipse cx="1322" cy="484" rx="106" ry="36"/><ellipse cx="1280" cy="506" rx="76" ry="36"/></g><g class="f-paper" opacity="0.67"><ellipse cx="297" cy="354" rx="55" ry="37"/><ellipse cx="157" cy="380" rx="72" ry="40"/><ellipse cx="134" cy="375" rx="82" ry="53"/><ellipse cx="257" cy="378" rx="57" ry="55"/><ellipse cx="99" cy="372" rx="68" ry="53"/><ellipse cx="72" cy="353" rx="63" ry="38"/></g><g class="f-paper" opacity="0.7"><ellipse cx="1605" cy="365" rx="88" ry="36"/><ellipse cx="1743" cy="360" rx="73" ry="39"/><ellipse cx="1700" cy="394" rx="53" ry="30"/><ellipse cx="1494" cy="364" rx="96" ry="35"/><ellipse cx="1726" cy="371" rx="91" ry="32"/><ellipse cx="1535" cy="388" rx="95" ry="26"/></g><g class="f-paper" opacity="0.44"><ellipse cx="1035" cy="381" rx="73" ry="35"/><ellipse cx="1035" cy="371" rx="61" ry="36"/><ellipse cx="1030" cy="383" rx="56" ry="38"/><ellipse cx="1126" cy="373" rx="52" ry="31"/><ellipse cx="1127" cy="396" rx="51" ry="27"/><ellipse cx="1165" cy="387" rx="59" ry="29"/></g><g class="f-paper" opacity="0.52"><ellipse cx="1842" cy="306" rx="79" ry="27"/><ellipse cx="1796" cy="274" rx="60" ry="39"/><ellipse cx="1695" cy="299" rx="82" ry="39"/><ellipse cx="1707" cy="272" rx="61" ry="33"/><ellipse cx="1767" cy="303" rx="65" ry="34"/><ellipse cx="1677" cy="286" rx="68" ry="29"/></g></g></g>
+<!-- wc-light: golden-hour light from the left; put last inside the masked group -->
+<g id="wc-light"><rect width="1920" height="1080" fill="url(#wc-light-grad)" style="mix-blend-mode:multiply"/><rect width="1920" height="1080" fill="url(#wc-glow-grad)" style="mix-blend-mode:screen"/></g>
+<!-- wc-grain-overlay / wc-splatters: put at the very end, outside the mask -->
+<g id="wc-grain-overlay"><rect width="1920" height="1080" fill="#000" filter="url(#wc-grain)" opacity=".38" style="mix-blend-mode:multiply"/></g>
+<g id="wc-splatters" filter="url(#wc-ink)"><circle class="f-splat_cool" cx="1664" cy="846" r="8.5" opacity="0.32"/><circle class="f-splat_cool" cx="1648" cy="866" r="2.5" opacity="0.32"/><circle class="f-splat_cool" cx="1645" cy="865" r="1.6" opacity="0.43"/><circle class="f-splat_cool" cx="1670" cy="861" r="1.2" opacity="0.40"/><circle class="f-splat_cool" cx="1115" cy="1007" r="8.5" opacity="0.42"/><circle class="f-splat_cool" cx="1118" cy="987" r="2.4" opacity="0.24"/><circle class="f-splat_cool" cx="1109" cy="992" r="2.5" opacity="0.40"/><circle class="f-splat_cool" cx="1102" cy="1024" r="2.3" opacity="0.37"/><circle class="f-splat_warm" cx="531" cy="136" r="3" opacity="0.44"/><circle class="f-splat_warm" cx="356" cy="209" r="4" opacity="0.34"/><circle class="f-splat_warm" cx="351" cy="203" r="1.8" opacity="0.24"/><circle class="f-splat_warm" cx="335" cy="231" r="1.7" opacity="0.31"/><circle class="f-splat_warm" cx="362" cy="223" r="2.3" opacity="0.40"/><circle class="f-splat_warm" cx="305" cy="793" r="2.5" opacity="0.28"/><circle class="f-splat_warm" cx="107" cy="714" r="6" opacity="0.30"/><circle class="f-splat_warm" cx="125" cy="706" r="2.1" opacity="0.22"/><circle class="f-splat_warm" cx="118" cy="731" r="2.0" opacity="0.40"/><circle class="f-splat_warm" cx="86" cy="695" r="1.9" opacity="0.37"/><circle class="f-splat_cool" cx="1596" cy="819" r="2.5" opacity="0.58"/><circle class="f-splat_cool" cx="1678" cy="316" r="2" opacity="0.27"/><circle class="f-splat_warm" cx="384" cy="958" r="4" opacity="0.35"/><circle class="f-splat_warm" cx="398" cy="942" r="1.8" opacity="0.43"/><circle class="f-splat_warm" cx="372" cy="948" r="1.8" opacity="0.28"/><circle class="f-splat_warm" cx="364" cy="944" r="1.2" opacity="0.43"/><circle class="f-splat_warm" cx="530" cy="55" r="8.5" opacity="0.34"/><circle class="f-splat_warm" cx="542" cy="35" r="2.3" opacity="0.44"/><circle class="f-splat_warm" cx="528" cy="56" r="2.0" opacity="0.42"/><circle class="f-splat_warm" cx="519" cy="57" r="2.3" opacity="0.38"/><circle class="f-splat_warm" cx="351" cy="880" r="2" opacity="0.38"/><circle class="f-splat_warm" cx="1042" cy="63" r="6" opacity="0.59"/><circle class="f-splat_warm" cx="1033" cy="64" r="1.5" opacity="0.44"/><circle class="f-splat_warm" cx="1059" cy="82" r="2.3" opacity="0.38"/><circle class="f-splat_warm" cx="1053" cy="51" r="1.4" opacity="0.36"/><circle class="f-splat_warm" cx="196" cy="772" r="3" opacity="0.33"/><circle class="f-splat_warm" cx="504" cy="191" r="2.5" opacity="0.36"/><circle class="f-splat_warm" cx="51" cy="469" r="2.5" opacity="0.46"/><circle class="f-splat_warm" cx="1227" cy="1022" r="2" opacity="0.25"/><circle class="f-splat_warm" cx="1265" cy="54" r="1.5" opacity="0.47"/><circle class="f-splat_warm" cx="1635" cy="162" r="2.5" opacity="0.59"/><circle class="f-splat_cool" cx="1886" cy="722" r="4" opacity="0.48"/><circle class="f-splat_cool" cx="1884" cy="741" r="2.1" opacity="0.26"/><circle class="f-splat_cool" cx="1904" cy="702" r="1.8" opacity="0.30"/><circle class="f-splat_cool" cx="1875" cy="703" r="2.2" opacity="0.20"/><circle class="f-splat_cool" cx="1486" cy="889" r="4" opacity="0.48"/><circle class="f-splat_cool" cx="1482" cy="894" r="1.8" opacity="0.22"/><circle class="f-splat_cool" cx="1491" cy="911" r="2.1" opacity="0.32"/><circle class="f-splat_cool" cx="1487" cy="884" r="1.7" opacity="0.43"/><circle class="f-splat_warm" cx="1789" cy="785" r="1.5" opacity="0.34"/><circle class="f-splat_cool" cx="453" cy="195" r="6" opacity="0.58"/><circle class="f-splat_cool" cx="442" cy="175" r="2.0" opacity="0.37"/><circle class="f-splat_cool" cx="461" cy="213" r="2.5" opacity="0.27"/><circle class="f-splat_cool" cx="471" cy="212" r="1.1" opacity="0.33"/><circle class="f-splat_cool" cx="1446" cy="1011" r="2" opacity="0.58"/><circle class="f-splat_cool" cx="939" cy="76" r="2.5" opacity="0.46"/><circle class="f-splat_cool" cx="238" cy="905" r="6" opacity="0.54"/><circle class="f-splat_cool" cx="239" cy="904" r="1.8" opacity="0.20"/><circle class="f-splat_cool" cx="217" cy="925" r="1.4" opacity="0.42"/><circle class="f-splat_cool" cx="250" cy="900" r="1.9" opacity="0.34"/><circle class="f-splat_warm" cx="1339" cy="916" r="4" opacity="0.58"/><circle class="f-splat_warm" cx="1332" cy="901" r="1.0" opacity="0.21"/><circle class="f-splat_warm" cx="1347" cy="922" r="2.0" opacity="0.38"/><circle class="f-splat_warm" cx="1319" cy="920" r="1.5" opacity="0.40"/><circle class="f-splat_warm" cx="1385" cy="54" r="8.5" opacity="0.51"/><circle class="f-splat_warm" cx="1394" cy="49" r="1.4" opacity="0.25"/><circle class="f-splat_warm" cx="1364" cy="74" r="2.4" opacity="0.39"/><circle class="f-splat_warm" cx="1367" cy="65" r="1.9" opacity="0.32"/><circle class="f-splat_cool" cx="1619" cy="928" r="2.5" opacity="0.36"/><circle class="f-splat_warm" cx="253" cy="736" r="2.5" opacity="0.27"/><circle class="f-splat_warm" cx="1073" cy="44" r="2.5" opacity="0.47"/><circle class="f-splat_warm" cx="1833" cy="632" r="8.5" opacity="0.28"/><circle class="f-splat_warm" cx="1832" cy="612" r="1.8" opacity="0.38"/><circle class="f-splat_warm" cx="1848" cy="635" r="1.4" opacity="0.31"/><circle class="f-splat_warm" cx="1834" cy="623" r="2.1" opacity="0.21"/></g>
+
+<!-- Simple local-element symbols. Origin = base centre, ~100 units tall. Scale with <use transform>. Wrap in a wc-bleed group. -->
+<g id="wc-tree-round"><rect x="-3" y="-34" width="6" height="34" class="f-rock_shade"/><circle cx="0" cy="-62" r="30" class="f-foliage"/><circle cx="-16" cy="-48" r="20" class="f-olive"/><circle cx="17" cy="-72" r="21" class="f-olive"/><circle cx="14" cy="-46" r="16" class="f-foliage_deep" opacity=".7"/></g>
+<g id="wc-tree-cypress"><path d="M0-110 C14-80 16-30 6 0 L-6 0 C-16-30 -14-80 0-110Z" class="f-foliage_deep"/><path d="M-2-100 C-9-70 -9-30 -4 0 L-6 0 C-12-30 -12-70 -2-100Z" class="f-olive" opacity=".7"/></g>
+<g id="wc-tree-poplar"><path d="M0-130 C20-95 22-35 7 0 L-7 0 C-22-35 -20-95 0-130Z" class="f-olive"/><path d="M5-120 C14-85 14-35 5 0 L2 0 C9-35 9-85 5-120Z" class="f-foliage_deep" opacity=".6"/></g>
+<g id="wc-tree-palm"><rect x="-3" y="-80" width="6" height="80" class="f-rock_shade"/><path d="M0-82 C-30-96 -52-84 -62-66 C-40-82 -22-84 0-82Z M0-82 C30-96 52-84 62-66 C40-82 22-84 0-82Z M0-82 C-18-108 -34-112 -50-106 C-30-104 -14-98 0-82Z M0-82 C18-108 34-112 50-106 C30-104 14-98 0-82Z M0-82 C-4-110 4-120 0-122 C-6-110 -6-96 0-82Z" class="f-foliage"/></g>
+</defs>
+<use href="#wc-paper"/><use href="#wc-halo"/>
+<g mask="url(#wc-vignette)">
+ <use href="#wc-sky"/>
+
+ <!-- Alborz range (far) -->
+ <g filter="url(#wc-soft)" opacity=".75">
+  <path d="M120 740 L330 620 L430 650 L560 590 L690 650 L1210 620 L1380 500 L1500 570 L1600 480 L1800 700 L1800 760 L120 760Z" class="f-sky_slate" opacity=".55"/>
+  <path d="M1340 560 L1380 500 L1420 540 L1380 560Z M1550 540 L1600 480 L1650 540Z" class="f-snow" opacity=".8"/>
+  <path d="M120 750 C400 690 800 700 1200 706 C1500 700 1700 720 1800 750 L1800 770 L120 770Z" class="f-sand" opacity=".6"/>
+ </g>
+ <!-- distant city -->
+ <g filter="url(#wc-bleed)" opacity=".7">
+  <rect x="1500" y="640" width="60" height="120" class="f-sand"/><rect x="1566" y="660" width="40" height="100" class="f-shade_cool" opacity=".6"/>
+  <rect x="250" y="690" width="40" height="70" class="f-sand"/><rect x="300" y="700" width="60" height="60" class="f-shade_cool" opacity=".5"/>
+ </g>
+ <!-- trees (autumn) -->
+ <g filter="url(#wc-bleed)">
+  <use href="#wc-tree-round" transform="translate(300 772) scale(1.1)" opacity=".9"/>
+  <use href="#wc-tree-round" transform="translate(400 776) scale(.9)" style="fill:var(--autumn)" opacity=".9"/>
+  <ellipse cx="250" cy="760" rx="120" ry="14" class="f-autumn" opacity=".6"/>
+  <ellipse cx="1650" cy="760" rx="150" ry="16" class="f-autumn" opacity=".6"/>
+  <use href="#wc-tree-round" transform="translate(1560 774) scale(1.2)" opacity=".9"/>
+  <use href="#wc-tree-round" transform="translate(1700 778) scale(1)" opacity=".9"/>
+ </g>
+ <!-- ground band -->
+ <g filter="url(#wc-bleed)">
+  <rect x="140" y="760" width="1640" height="32" class="f-olive" opacity=".55"/>
+  <rect x="140" y="780" width="1640" height="12" class="f-sand" opacity=".7"/>
+ </g>
+
+<!-- ============ LANDMARK: Azadi Tower (ground line y=780) ============ -->
+ <g id="landmark">
+  <g filter="url(#wc-bleed)">
+   <!-- left leg (sunlit) and right leg (shade-side) -->
+   <path d="M860 330 L960 330 C900 400 800 560 770 780 L510 780 Z" class="f-cloud_warm"/>
+   <path d="M960 330 L1060 330 L1410 780 L1150 780 C1120 560 1020 400 960 330 Z" class="f-sand" opacity=".6"/>
+   <!-- lit outer facet on the left leg -->
+   <path d="M860 330 L900 330 L600 780 L510 780 Z" class="f-gold" opacity=".55"/>
+   <!-- top block: front + side -->
+   <path d="M860 128 L1040 128 L1040 340 L860 340 Z" class="f-cloud_warm"/>
+   <path d="M1040 128 L1072 142 L1072 340 L1040 340 Z" class="f-sand"/>
+   <!-- turquoise band under the cap + tiled arch soffit -->
+   <path d="M866 150 L1040 150 L1040 184 L866 184 Z" class="f-turquoise"/>
+   <path d="M770 780 C800 560 900 400 960 330 C1020 400 1120 560 1150 780 L1090 780 C1075 580 1000 440 960 390 C920 440 845 580 830 780 Z" class="f-turquoise_deep" opacity=".22"/>
+   <path d="M845 600 C870 530 920 450 960 395 C1000 450 1050 530 1075 600 L1048 600 C1025 540 990 490 960 445 C930 490 895 540 872 600Z" class="f-turquoise"/>
+   <!-- opening: sky/mountains show through -->
+   <path d="M830 780 C845 580 920 440 960 390 C1000 440 1075 580 1090 780 Z" class="f-sky_mid" opacity=".75"/>
+  </g>
+  <g filter="url(#wc-bleed)" style="mix-blend-mode:multiply">
+   <path d="M960 330 L1060 330 L1410 780 L1150 780 C1120 560 1020 400 960 330 Z" class="f-shade_cool" opacity=".5"/>
+   <path d="M1040 128 L1072 142 L1072 340 L1040 340 Z" class="f-shade_cool" opacity=".55"/>
+   <path d="M960 390 C920 440 845 580 830 780 L905 780 C915 600 935 480 960 430Z" class="f-shade_deep" opacity=".5"/>
+   <path d="M866 150 L1040 150 L1040 184 L866 184 Z" class="f-shade_cool" opacity=".15"/>
+  </g>
+  <g filter="url(#wc-ink)" opacity=".5" fill="none" class="s-ink" stroke-width="1.4">
+   <path d="M860 128 L1040 128 L1072 142 L1072 340 L860 340 Z M1040 128 V340 M860 150 H1040 M860 184 H1040"/>
+   <path d="M860 330 L510 780 L770 780 C800 560 900 400 960 330 C1020 400 1120 560 1150 780 L1410 780 L1060 330 Z"/>
+   <path d="M830 780 C845 580 920 440 960 390 C1000 440 1075 580 1090 780"/>
+   <path d="M860 330 L510 780 M872 330 L542 780 M885 330 L575 780 M898 330 L608 780 M910 330 L640 780 M922 330 L672 780 M935 330 L705 780 M948 330 L738 780 M960 330 L770 780" opacity=".35"/><path d="M960 330 L1150 780 M972 330 L1182 780 M985 330 L1215 780 M998 330 L1248 780 M1010 330 L1280 780 M1022 330 L1312 780 M1035 330 L1345 780 M1048 330 L1378 780 M1060 330 L1410 780" opacity=".3"/>
+   <path d="M880 128 V184 M900 150 V184 M920 150 V184 M940 150 V184 M960 150 V184 M980 150 V184 M1000 150 V184 M1020 150 V184" class="s-turquoise_deep" opacity=".8"/>
+   <path d="M865 640 C885 560 925 470 960 415 C995 470 1035 560 1055 640" class="s-turquoise_deep" opacity=".7"/>
+  </g>
+  <g filter="url(#wc-bleed)">
+   <path d="M866 134 L900 134 L900 336 L866 336Z" class="f-paper" opacity=".55"/>
+   <path d="M862 336 L905 336 L650 740 L610 740Z" class="f-paper" opacity=".4"/>
+  </g>
+ </g>
+
+ <!-- plaza + reflecting pool -->
+ <g filter="url(#wc-bleed)">
+  <rect x="150" y="780" width="1620" height="260" class="f-water" opacity=".45"/>
+  <ellipse cx="350" cy="786" rx="260" ry="16" class="f-olive" opacity=".55"/>
+  <ellipse cx="1600" cy="786" rx="260" ry="16" class="f-olive" opacity=".55"/>
+ </g>
+ <g mask="url(#wc-reflect-fade)">
+  <g filter="url(#wc-reflection)"><g transform="translate(0 1560) scale(1 -1)"><use href="#landmark"/></g></g>
+ </g>
+ <use href="#wc-light"/>
+</g>
+<use href="#wc-grain-overlay"/><use href="#wc-splatters"/>
+</svg>

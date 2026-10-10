@@ -1,0 +1,10 @@
+{
+  "paper": "#F5F0E6", "paper_deep": "#E9DCC2", "paper_warm": "#F2E3C6",
+  "sand": "#E6CC98", "ochre": "#D4A058", "gold": "#EDBE6C", "sienna": "#B2683A", "burnt": "#8A4A2A", "brick": "#A9552F",
+  "shade_warm": "#8E6B57", "shade_cool": "#6D7B95", "shade_deep": "#4B5670",
+  "sky_pale": "#DDE4EB", "sky_mid": "#A8B7CB", "sky_slate": "#7E8EA8", "sky_deep": "#5A6886", "cloud_warm": "#F0E2CB",
+  "turquoise": "#3FA6A0", "turquoise_deep": "#2B7F86", "lapis": "#3C5F9C", "gold_dome": "#E0A838",
+  "olive": "#7F8B4E", "foliage": "#5F7440", "foliage_deep": "#40552F", "autumn": "#C98A3C",
+  "water": "#8FA6BA", "water_deep": "#60778F", "rock": "#9C8771", "rock_shade": "#6E5F55", "snow": "#F1EEE8",
+  "ink": "#6B4A2F", "splat_warm": "#C98B4A", "splat_cool": "#6F86A8"
+}

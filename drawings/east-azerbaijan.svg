@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+<!--@filters-->
+<use href="#wc-paper"/><use href="#wc-halo"/>
+<g mask="url(#wc-vignette)">
+ <g transform="matrix(-1 0 0 1 1920 0)"><use href="#wc-sky"/></g>
+
+ <g transform="translate(0 60)">
+ <!-- Sahand mountain (far) -->
+ <g filter="url(#wc-soft)" opacity=".8">
+  <path d="M100 760 C300 640 520 520 700 500 C800 440 900 380 1000 420 C1150 400 1400 520 1820 740 L1820 780 L100 780Z" class="f-sky_slate" opacity=".5"/>
+  <path d="M880 440 C940 400 1010 400 1060 430 C1000 450 930 470 880 440Z" class="f-snow" opacity=".75"/>
+  <path d="M500 560 C560 520 640 510 700 520 C640 540 560 560 500 560Z" class="f-snow" opacity=".5"/>
+ </g>
+
+ <!-- modern block (far right) + far low buildings -->
+ <g filter="url(#wc-bleed)" opacity=".85">
+  <rect x="1500" y="470" width="130" height="300" class="f-sky_pale"/><rect x="1500" y="470" width="130" height="300" class="f-shade_cool" opacity=".25"/>
+  <rect x="380" y="640" width="200" height="140" class="f-sand" opacity=".75"/><rect x="1380" y="620" width="130" height="160" class="f-ochre" opacity=".7"/>
+ </g>
+ <g filter="url(#wc-ink)" opacity=".4" fill="none" class="s-ink" stroke-width="1.2">
+  <path d="M1500 470h130v300h-130zM1500 520h130M1500 570h130M1500 620h130M1500 670h130M1500 720h130M1545 470v300M1590 470v300"/>
+ </g>
+
+ <!-- ============ LANDMARK: Tabriz Municipality clock tower (ground line y=780) ============ -->
+ <g id="landmark">
+  <g filter="url(#wc-bleed)">
+   <!-- wings -->
+   <path d="M560 560 H830 V780 H560Z" class="f-gold" opacity=".9"/>
+   <path d="M1080 520 H1420 V780 H1080Z" class="f-ochre" opacity=".92"/>
+   <path d="M1250 470 H1400 V520 H1250Z" class="f-sand" opacity=".9"/>
+   <!-- tower: base, shaft, clock stage, lantern -->
+   <path d="M800 560 H1120 V780 H800Z" class="f-ochre"/>
+   <path d="M850 300 H1070 V560 H850Z" class="f-ochre"/>
+   <path d="M850 300 H1070 V560 H850Z" class="f-sienna" opacity=".3"/>
+   <path d="M840 215 H1080 V300 H840Z" class="f-ochre"/>
+   <path d="M900 150 H1020 V215 H900Z" class="f-gold"/>
+   <path d="M890 150 C890 120 925 100 960 98 C995 100 1030 120 1030 150Z" class="f-burnt" opacity=".85"/>
+   <circle cx="960" cy="255" r="40" class="f-cloud_warm"/>
+   <!-- corner pinnacles -->
+   <path d="M838 300 V250 L850 222 L862 250 V300Z M1058 300 V250 L1070 222 L1082 250 V300Z" class="f-sienna" opacity=".9"/>
+   <!-- portal -->
+   <path d="M905 780V685.0A55.0 55.0 0 0 1 1015 685.0V780Z" class="f-shade_deep" opacity=".55"/>
+  </g>
+  <g filter="url(#wc-bleed)" style="mix-blend-mode:multiply">
+   <path d="M1020 215 H1080 V560 H1020Z M1000 560 H1120 V780 H1000Z" class="f-shade_cool" opacity=".5"/>
+   <path d="M1080 520 H1420 V780 H1080Z" class="f-shade_cool" opacity=".28"/>
+   <path d="M850 300 H1070 V312 H850Z M800 560 H1120 V574 H800Z M830 215 H1090 V228 H830Z" class="f-burnt" opacity=".4"/>
+   <path d="M590 688V651.0A11.0 11.0 0 0 1 612 651.0V688Z M626 688V651.0A11.0 11.0 0 0 1 648 651.0V688Z M662 688V651.0A11.0 11.0 0 0 1 684 651.0V688Z M698 688V651.0A11.0 11.0 0 0 1 720 651.0V688Z M734 688V651.0A11.0 11.0 0 0 1 756 651.0V688Z M770 688V651.0A11.0 11.0 0 0 1 792 651.0V688Z M590 770V731.0A11.0 11.0 0 0 1 612 731.0V770Z M626 770V731.0A11.0 11.0 0 0 1 648 731.0V770Z M662 770V731.0A11.0 11.0 0 0 1 684 731.0V770Z M698 770V731.0A11.0 11.0 0 0 1 720 731.0V770Z M734 770V731.0A11.0 11.0 0 0 1 756 731.0V770Z M770 770V731.0A11.0 11.0 0 0 1 792 731.0V770Z M1110 638V601.0A11.0 11.0 0 0 1 1132 601.0V638Z M1148 638V601.0A11.0 11.0 0 0 1 1170 601.0V638Z M1186 638V601.0A11.0 11.0 0 0 1 1208 601.0V638Z M1224 638V601.0A11.0 11.0 0 0 1 1246 601.0V638Z M1262 638V601.0A11.0 11.0 0 0 1 1284 601.0V638Z M1300 638V601.0A11.0 11.0 0 0 1 1322 601.0V638Z M1338 638V601.0A11.0 11.0 0 0 1 1360 601.0V638Z M1376 638V601.0A11.0 11.0 0 0 1 1398 601.0V638Z M1110 718V681.0A11.0 11.0 0 0 1 1132 681.0V718Z M1148 718V681.0A11.0 11.0 0 0 1 1170 681.0V718Z M1186 718V681.0A11.0 11.0 0 0 1 1208 681.0V718Z M1224 718V681.0A11.0 11.0 0 0 1 1246 681.0V718Z M1262 718V681.0A11.0 11.0 0 0 1 1284 681.0V718Z M1300 718V681.0A11.0 11.0 0 0 1 1322 681.0V718Z M1338 718V681.0A11.0 11.0 0 0 1 1360 681.0V718Z M1376 718V681.0A11.0 11.0 0 0 1 1398 681.0V718Z M1110 776V741.0A11.0 11.0 0 0 1 1132 741.0V776Z M1148 776V741.0A11.0 11.0 0 0 1 1170 741.0V776Z M1186 776V741.0A11.0 11.0 0 0 1 1208 741.0V776Z M1224 776V741.0A11.0 11.0 0 0 1 1246 741.0V776Z M1262 776V741.0A11.0 11.0 0 0 1 1284 741.0V776Z M1300 776V741.0A11.0 11.0 0 0 1 1322 741.0V776Z M1338 776V741.0A11.0 11.0 0 0 1 1360 741.0V776Z M1376 776V741.0A11.0 11.0 0 0 1 1398 741.0V776Z M872 480V363.0A13.0 13.0 0 0 1 898 363.0V480Z M925 480V363.0A13.0 13.0 0 0 1 951 363.0V480Z M1020 480V363.0A13.0 13.0 0 0 1 1046 363.0V480Z" class="f-shade_deep" opacity=".55"/>
+   <path d="M900 150 H1020 V215 H900Z" class="f-shade_warm" opacity=".2"/>
+  </g>
+  <g filter="url(#wc-ink)" opacity=".55" fill="none" class="s-ink" stroke-width="1.5">
+   <path d="M560 560 H830 V780 M830 560 V300 H850 M1070 300 H1080 V215 H840 V300 H1070 M1120 560 V520 H1420 V780 M1250 520 V470 H1400 V520"/>
+   <path d="M590 688V651.0A11.0 11.0 0 0 1 612 651.0V688Z M626 688V651.0A11.0 11.0 0 0 1 648 651.0V688Z M662 688V651.0A11.0 11.0 0 0 1 684 651.0V688Z M698 688V651.0A11.0 11.0 0 0 1 720 651.0V688Z M734 688V651.0A11.0 11.0 0 0 1 756 651.0V688Z M770 688V651.0A11.0 11.0 0 0 1 792 651.0V688Z M590 770V731.0A11.0 11.0 0 0 1 612 731.0V770Z M626 770V731.0A11.0 11.0 0 0 1 648 731.0V770Z M662 770V731.0A11.0 11.0 0 0 1 684 731.0V770Z M698 770V731.0A11.0 11.0 0 0 1 720 731.0V770Z M734 770V731.0A11.0 11.0 0 0 1 756 731.0V770Z M770 770V731.0A11.0 11.0 0 0 1 792 731.0V770Z M1110 638V601.0A11.0 11.0 0 0 1 1132 601.0V638Z M1148 638V601.0A11.0 11.0 0 0 1 1170 601.0V638Z M1186 638V601.0A11.0 11.0 0 0 1 1208 601.0V638Z M1224 638V601.0A11.0 11.0 0 0 1 1246 601.0V638Z M1262 638V601.0A11.0 11.0 0 0 1 1284 601.0V638Z M1300 638V601.0A11.0 11.0 0 0 1 1322 601.0V638Z M1338 638V601.0A11.0 11.0 0 0 1 1360 601.0V638Z M1376 638V601.0A11.0 11.0 0 0 1 1398 601.0V638Z M1110 718V681.0A11.0 11.0 0 0 1 1132 681.0V718Z M1148 718V681.0A11.0 11.0 0 0 1 1170 681.0V718Z M1186 718V681.0A11.0 11.0 0 0 1 1208 681.0V718Z M1224 718V681.0A11.0 11.0 0 0 1 1246 681.0V718Z M1262 718V681.0A11.0 11.0 0 0 1 1284 681.0V718Z M1300 718V681.0A11.0 11.0 0 0 1 1322 681.0V718Z M1338 718V681.0A11.0 11.0 0 0 1 1360 681.0V718Z M1376 718V681.0A11.0 11.0 0 0 1 1398 681.0V718Z M1110 776V741.0A11.0 11.0 0 0 1 1132 741.0V776Z M1148 776V741.0A11.0 11.0 0 0 1 1170 741.0V776Z M1186 776V741.0A11.0 11.0 0 0 1 1208 741.0V776Z M1224 776V741.0A11.0 11.0 0 0 1 1246 741.0V776Z M1262 776V741.0A11.0 11.0 0 0 1 1284 741.0V776Z M1300 776V741.0A11.0 11.0 0 0 1 1322 741.0V776Z M1338 776V741.0A11.0 11.0 0 0 1 1360 741.0V776Z M1376 776V741.0A11.0 11.0 0 0 1 1398 741.0V776Z M872 480V363.0A13.0 13.0 0 0 1 898 363.0V480Z M925 480V363.0A13.0 13.0 0 0 1 951 363.0V480Z M1020 480V363.0A13.0 13.0 0 0 1 1046 363.0V480Z"/>
+   <path d="M800 560 H1120 M850 300 H1070 M830 215 H1090 M890 150 H1030 M900 150 V215 M1020 150 V215 M930 160 V212 M990 160 V212 M890 150 C890 120 925 100 960 98 C995 100 1030 120 1030 150 M960 98 V70"/>
+   <path d="M905 780V685.0A55.0 55.0 0 0 1 1015 685.0V780Z M920 780V688.0A40.0 40.0 0 0 1 1000 688.0V780Z"/>
+   <circle cx="960" cy="255" r="40"/><circle cx="960" cy="255" r="33" opacity=".6"/><path d="M960 255 V230 M960 255 L978 262 M960 218v6M960 286v6M922 255h6M992 255h6"/>
+   <path d="M850 330 H1070 M850 520 H1070 M845 590 H1115 M845 700 H1115" opacity=".5"/>
+   <path d="M1080 600 H1420 M1080 660 H1420 M1080 720 H1420 M590 620 H800 M590 700 H800" opacity=".35"/>
+   <path d="M838 250 L850 222 L862 250 M1058 250 L1070 222 L1082 250"/>
+   <path d="M880 570 V780 M1040 570 V780 M900 330 V540 M1010 330 V540" opacity=".28"/>
+  </g>
+  <g filter="url(#wc-bleed)">
+   <path d="M852 230 H870 V555 H852Z" class="f-gold" opacity=".5"/>
+   <path d="M802 574 H822 V776 H802Z" class="f-paper" opacity=".4"/>
+   <path d="M900 152 H915 V212 H900Z" class="f-paper" opacity=".5"/>
+   <path d="M960 70 L990 78 L960 88Z" class="f-brick"/>
+   <path d="M944 258 a16 16 0 0 1 32 0Z" class="f-paper" opacity=".35"/>
+  </g>
+ </g>
+
+ <!-- foreground roofs + trees -->
+ <g filter="url(#wc-bleed)">
+  <path d="M250 790 L420 700 L620 700 L760 790Z" class="f-sky_deep" opacity=".6"/><path d="M250 790 L420 700 L440 700 L300 790Z" class="f-sky_slate" opacity=".5"/>
+  <path d="M1180 790 L1300 730 L1560 730 L1700 790Z" class="f-sienna" opacity=".6"/>
+  <rect x="300" y="760" width="1320" height="26" class="f-sand" opacity=".6"/>
+  <use href="#wc-tree-poplar" transform="translate(1530 786) scale(1.5)"/>
+  <use href="#wc-tree-poplar" transform="translate(1580 790) scale(1.2)" opacity=".85"/>
+  <use href="#wc-tree-round" transform="translate(470 790) scale(1.2)" style="fill:var(--autumn)"/>
+ </g>
+ </g>
+ <!-- foreground: street wash + old rooftops -->
+ <g filter="url(#wc-bleed)">
+  <path d="M230 835 H1700 C1640 905 1450 950 960 950 C470 950 290 905 230 835Z" class="f-sand" opacity=".6"/>
+  <path d="M300 880 H1000 C900 925 560 940 300 900Z" class="f-rock" opacity=".3"/>
+  <path d="M1100 905 L1190 860 H1500 L1600 905Z" class="f-sienna" opacity=".55"/><path d="M1100 905 L1190 860 H1210 L1130 905Z" class="f-brick" opacity=".4"/>
+  <path d="M420 900 L500 860 H800 L880 905Z" class="f-sky_deep" opacity=".45"/>
+ </g>
+ <g filter="url(#wc-ink)" opacity=".4" fill="none" class="s-ink" stroke-width="1.2"><path d="M1190 860 L1100 905 M1500 860 L1600 905 M1250 862 L1180 905 M1330 862 L1300 905 M1410 862 L1420 905 M500 860 L420 900 M800 860 L880 905"/></g>
+ <use href="#wc-light"/>
+</g>
+<use href="#wc-grain-overlay"/><use href="#wc-splatters"/>
+</svg>

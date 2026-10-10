@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+<!--@filters-->
+<use href="#wc-paper"/><use href="#wc-halo"/>
+<g mask="url(#wc-vignette)">
+ <use href="#wc-sky"/>
+
+ <!-- Alborz range (far) -->
+ <g filter="url(#wc-soft)" opacity=".75">
+  <path d="M120 740 L330 620 L430 650 L560 590 L690 650 L1210 620 L1380 500 L1500 570 L1600 480 L1800 700 L1800 760 L120 760Z" class="f-sky_slate" opacity=".55"/>
+  <path d="M1340 560 L1380 500 L1420 540 L1380 560Z M1550 540 L1600 480 L1650 540Z" class="f-snow" opacity=".8"/>
+  <path d="M120 750 C400 690 800 700 1200 706 C1500 700 1700 720 1800 750 L1800 770 L120 770Z" class="f-sand" opacity=".6"/>
+ </g>
+ <!-- distant city -->
+ <g filter="url(#wc-bleed)" opacity=".7">
+  <rect x="1500" y="640" width="60" height="120" class="f-sand"/><rect x="1566" y="660" width="40" height="100" class="f-shade_cool" opacity=".6"/>
+  <rect x="250" y="690" width="40" height="70" class="f-sand"/><rect x="300" y="700" width="60" height="60" class="f-shade_cool" opacity=".5"/>
+ </g>
+ <!-- trees (autumn) -->
+ <g filter="url(#wc-bleed)">
+  <use href="#wc-tree-round" transform="translate(300 772) scale(1.1)" opacity=".9"/>
+  <use href="#wc-tree-round" transform="translate(400 776) scale(.9)" style="fill:var(--autumn)" opacity=".9"/>
+  <ellipse cx="250" cy="760" rx="120" ry="14" class="f-autumn" opacity=".6"/>
+  <ellipse cx="1650" cy="760" rx="150" ry="16" class="f-autumn" opacity=".6"/>
+  <use href="#wc-tree-round" transform="translate(1560 774) scale(1.2)" opacity=".9"/>
+  <use href="#wc-tree-round" transform="translate(1700 778) scale(1)" opacity=".9"/>
+ </g>
+ <!-- ground band -->
+ <g filter="url(#wc-bleed)">
+  <rect x="140" y="760" width="1640" height="32" class="f-olive" opacity=".55"/>
+  <rect x="140" y="780" width="1640" height="12" class="f-sand" opacity=".7"/>
+ </g>
+
+<!-- ============ LANDMARK: Azadi Tower (ground line y=780) ============ -->
+ <g id="landmark">
+  <g filter="url(#wc-bleed)">
+   <!-- left leg (sunlit) and right leg (shade-side) -->
+   <path d="M860 330 L960 330 C900 400 800 560 770 780 L510 780 Z" class="f-cloud_warm"/>
+   <path d="M960 330 L1060 330 L1410 780 L1150 780 C1120 560 1020 400 960 330 Z" class="f-sand" opacity=".6"/>
+   <!-- lit outer facet on the left leg -->
+   <path d="M860 330 L900 330 L600 780 L510 780 Z" class="f-gold" opacity=".55"/>
+   <!-- top block: front + side -->
+   <path d="M860 128 L1040 128 L1040 340 L860 340 Z" class="f-cloud_warm"/>
+   <path d="M1040 128 L1072 142 L1072 340 L1040 340 Z" class="f-sand"/>
+   <!-- turquoise band under the cap + tiled arch soffit -->
+   <path d="M866 150 L1040 150 L1040 184 L866 184 Z" class="f-turquoise"/>
+   <path d="M770 780 C800 560 900 400 960 330 C1020 400 1120 560 1150 780 L1090 780 C1075 580 1000 440 960 390 C920 440 845 580 830 780 Z" class="f-turquoise_deep" opacity=".22"/>
+   <path d="M845 600 C870 530 920 450 960 395 C1000 450 1050 530 1075 600 L1048 600 C1025 540 990 490 960 445 C930 490 895 540 872 600Z" class="f-turquoise"/>
+   <!-- opening: sky/mountains show through -->
+   <path d="M830 780 C845 580 920 440 960 390 C1000 440 1075 580 1090 780 Z" class="f-sky_mid" opacity=".75"/>
+  </g>
+  <g filter="url(#wc-bleed)" style="mix-blend-mode:multiply">
+   <path d="M960 330 L1060 330 L1410 780 L1150 780 C1120 560 1020 400 960 330 Z" class="f-shade_cool" opacity=".5"/>
+   <path d="M1040 128 L1072 142 L1072 340 L1040 340 Z" class="f-shade_cool" opacity=".55"/>
+   <path d="M960 390 C920 440 845 580 830 780 L905 780 C915 600 935 480 960 430Z" class="f-shade_deep" opacity=".5"/>
+   <path d="M866 150 L1040 150 L1040 184 L866 184 Z" class="f-shade_cool" opacity=".15"/>
+  </g>
+  <g filter="url(#wc-ink)" opacity=".5" fill="none" class="s-ink" stroke-width="1.4">
+   <path d="M860 128 L1040 128 L1072 142 L1072 340 L860 340 Z M1040 128 V340 M860 150 H1040 M860 184 H1040"/>
+   <path d="M860 330 L510 780 L770 780 C800 560 900 400 960 330 C1020 400 1120 560 1150 780 L1410 780 L1060 330 Z"/>
+   <path d="M830 780 C845 580 920 440 960 390 C1000 440 1075 580 1090 780"/>
+   <path d="M860 330 L510 780 M872 330 L542 780 M885 330 L575 780 M898 330 L608 780 M910 330 L640 780 M922 330 L672 780 M935 330 L705 780 M948 330 L738 780 M960 330 L770 780" opacity=".35"/><path d="M960 330 L1150 780 M972 330 L1182 780 M985 330 L1215 780 M998 330 L1248 780 M1010 330 L1280 780 M1022 330 L1312 780 M1035 330 L1345 780 M1048 330 L1378 780 M1060 330 L1410 780" opacity=".3"/>
+   <path d="M880 128 V184 M900 150 V184 M920 150 V184 M940 150 V184 M960 150 V184 M980 150 V184 M1000 150 V184 M1020 150 V184" class="s-turquoise_deep" opacity=".8"/>
+   <path d="M865 640 C885 560 925 470 960 415 C995 470 1035 560 1055 640" class="s-turquoise_deep" opacity=".7"/>
+  </g>
+  <g filter="url(#wc-bleed)">
+   <path d="M866 134 L900 134 L900 336 L866 336Z" class="f-paper" opacity=".55"/>
+   <path d="M862 336 L905 336 L650 740 L610 740Z" class="f-paper" opacity=".4"/>
+  </g>
+ </g>
+
+ <!-- plaza + reflecting pool -->
+ <g filter="url(#wc-bleed)">
+  <rect x="150" y="780" width="1620" height="260" class="f-water" opacity=".45"/>
+  <ellipse cx="350" cy="786" rx="260" ry="16" class="f-olive" opacity=".55"/>
+  <ellipse cx="1600" cy="786" rx="260" ry="16" class="f-olive" opacity=".55"/>
+ </g>
+ <g mask="url(#wc-reflect-fade)">
+  <g filter="url(#wc-reflection)"><g transform="translate(0 1560) scale(1 -1)"><use href="#landmark"/></g></g>
+ </g>
+ <use href="#wc-light"/>
+</g>
+<use href="#wc-grain-overlay"/><use href="#wc-splatters"/>
+</svg>
